@@ -1,0 +1,530 @@
+/* ========== CSS Reset (modern, minimal) ========== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ========== Theme ========== */
+:root {
+  /* Neutral, modern default; swap accents later */
+  --bg: #0f1115;
+  --panel: #151821;
+  --elev: #1b2030;
+  --text: #e9ecf1;
+  --muted: #aeb6c2;
+  --dpblue: #1A2735;
+  --gold: #CFB482;
+  --bronze:#9C704C;
+
+  /* Accessible grayscale accents we can later recolor */
+  --accent: #d1d6e0;           /* light gray accent */
+  --accent-strong: #ffffff;    /* strong contrast on dark */
+  --line: #2a3245;
+}
+/* ========== Checkout Styles ========== */
+body{
+  background-image: url(/Content/background.jpeg);
+}
+header{
+  background-color: var(--dpblue);
+}
+h2, p, label, li, option{
+  color: var(--gold);
+}
+h2{
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 10px;
+}
+/*==== Nav ====*/
+nav{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--dpblue);
+}
+nav a{
+  color: var(--gold);
+}
+/*==== Back to Cart ====*/
+.back-to-cart a{
+  text-decoration: none;
+  color: var(--gold);
+    font-size: 1.25em;
+    position: relative;
+    right: 0px;
+    bottom: 8px;
+}
+
+.checkout-page{
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dpblue);
+  border: var(--gold) solid 2px;
+  border-radius: 25px;
+  width: 500%;
+  margin: 2rem;
+}
+
+#shipping, #payment{
+  padding: 25px;
+}
+
+.checkout input, .checkout label{
+  width: 95%;
+}
+
+.checkout label{
+  align-content: end;
+  justify-items: start;
+}
+
+.checkout input{
+  line-height: 40px;
+  border-radius: 4px;
+  border: var(--gold) solid 1.5px;
+  background-color: var(--dpblue);
+  color: var(--gold);
+}
+
+.checkout select{
+  border: var(--gold) solid 1.5px;
+  border-radius: 4px;
+  background-color: var(--dpblue);
+  color: var(--gold);
+  appearance: base-select;
+}
+/*==== Shipping ====*/
+#shipping form{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8,1fr);
+  row-gap: 5px;
+  width: 90%;
+}
+
+#shipping-label{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+svg#shipping-label{
+  margin: 0 10px 0 0;
+}
+
+label#first-name {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+input#first-name{
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+label#last-name{
+  grid-area: 1 / 3 / 2 / 5;
+}
+
+input#last-name{
+  grid-area: 2 / 3 / 3 / 5;
+}
+
+label#my-inbox{
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+input#my-inbox{
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+label#my-phone{
+  grid-area: 3 / 3 / 4 / 5;
+}
+
+input#my-phone{
+  grid-area: 4 / 3 / 5 / 5;
+}
+
+label#my-address{
+  grid-area: 5 / 1 / 6 / 5;
+}
+
+input#my-address{
+  grid-area: 6 / 1 / 7 / 5;
+  width: 98%;
+}
+
+label#my-city{
+  grid-area: 7 / 1 / 8 / 3;
+}
+
+input#my-city{
+  grid-area: 8 / 1 / 9 / 3;
+}
+
+label#my-state{
+  grid-area: 7 / 3 / 8 / 4;
+}
+
+select#my-state{
+  grid-area: 8 / 3 / 9 / 4;
+  width: 95%;
+}
+
+label#my-zip{
+  grid-area: 7 / 4 / 8 / 5;
+}
+
+input#my-zip{
+  grid-area: 8 / 4 / 9 / 5;
+  width: 91%;
+}
+/*==== Payment ====*/
+#payment form{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr 3fr;
+  grid-template-rows: repeat(6, 1fr);
+  width: 95%;
+  column-gap: 5px;
+}
+
+#payment-label{
+  display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+svg#payment-label{
+  margin: 0 10px 0 0;
+}
+
+label#card-name{
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+input#card-name{
+  grid-area: 2 / 1 / 3 / 4;
+}
+
+label#card-customer{
+  grid-area: 1 / 4 / 2 / 6;
+  text-align: center;
+}
+
+input#card-customer-yes{
+ grid-area: 2 / 4 / 3 / 5;
+  color: var(--dpblue);
+  background-color: var(--gold);
+  justify-self: end;
+  width:75%;
+}
+ 
+input#card-customer-no{
+ grid-area: 2 / 5 / 3 / 6;
+ background-color: var(--dpblue);
+ color: var(--gold);
+ width:75%;
+}
+
+label#card-num{
+  grid-area: 3 / 1 / 4 / 6;
+}
+
+input#card-num{
+grid-area: 4 / 1 / 5 / 6;
+width: 91%;
+}
+
+label#exp-date{
+  grid-area: 5 / 1 / 6 / 3;
+  text-align: center;
+}
+
+select#exp-date-month{
+  grid-area: 6 / 1 / 7 / 2;
+  width: 60%;
+  justify-self: end;
+}
+
+select#exp-date-year{
+  grid-area: 6 / 2 / 7 / 3;
+  width: 60%;
+}
+
+label#card-cvc{
+  grid-area: 5 / 3 / 6 / 4;
+}
+
+input#card-cvc{
+  grid-area: 6 / 3 / 7 / 4;
+  width: 70%;
+}
+
+label#bill-address{
+  grid-area: 5 / 4 / 6 / 6;
+  text-align: center;
+}
+
+input#bill-address-yes{
+  grid-area: 6 / 4 / 7 / 5;
+  color: var(--dpblue);
+  background-color: var(--gold);
+  justify-self: end;
+  width:75%;
+}
+
+input#bill-address-no{
+  grid-area: 6 / 5 / 7 / 6;
+  background-color: var(--dpblue);
+  color: var(--gold);
+  width:75%;
+}
+
+/*==== Order Summary ====*/
+.cartsum{
+    background-color: var(--dpblue);
+    position: relative;
+    border: var(--gold) solid 2px;
+    border-radius: 25px;
+    height: fit-content;
+    padding: 2rem 5rem 0 1rem;
+    left: 50px;
+}
+.cartsum ul{
+  list-style-type: none;
+}
+
+.cartsum li{
+  border-bottom: var(--gold) solid 2px;
+  width: 163px;
+  padding: 20px;
+}
+
+.cartsum p{
+  padding: 15px;
+}
+
+#grand-total{
+    border: var(--gold) solid 1px;
+    width: 55%;
+    border-radius: 4px;
+}
+.place-order{
+  background-color: var(--gold);
+  color: var(--dpblue);
+  padding: 14px 25px;
+    height: 35px;
+    width: 70%;
+    position: relative;
+    top: 500px;
+    right: 265px;
+    border-radius: 12px;
+    text-align: center;
+}
+/* ========== Media Queries ========== */
+
+
+/* ========== Tablet ========== */
+@media screen and (max-width: 650px){
+  .mobile-hide{
+    display: none;
+  }
+  .checkout-page{
+    display: flex;
+    flex-direction: column;
+  }
+  .checkout{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+  #shipping form{
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-row{
+    display: flex;
+    flex-direction: row;
+  }
+  .mobile-hide{
+    display: none;
+  }
+  #payment form{
+    width: 100%;
+    column-gap: 15px;
+  }
+  input#same-shipping{
+    grid-area: 1 / 4 / 3 / 5;
+        justify-self: end;
+        align-self: end;
+        width: 25%;
+        height: 90%;
+        transform: scale(.75);
+  }
+  label#same-shipping{
+    grid-area: 1 / 5 / 3 / 6;
+    width: 110%;
+    align-self: center;
+    justify-self: start;
+  }
+  input#same-address{
+    grid-area: 5 / 4 / 7 / 5;
+        justify-self: end;
+        align-self: end;
+        width: 25%;
+        height: 90%;
+        transform: scale(.75);
+  }
+  label#same-address{
+    grid-area: 5 / 5 / 7 / 6;
+    width: 110%;
+    align-self: center;
+    justify-self: start;
+  }
+  input[type="checkbox"] {
+    appearance: none;
+    border: var(--gold) solid 2px;
+    width: 60px;
+    line-height: 70px;
+  }
+  input[type="checkbox"]:checked{
+    border-color:(var(--gold));
+    background-color: var(--dpblue);
+  }
+  input[type="checkbox"]:checked::before{
+    content: '\2713';
+    font-size: 40px;
+    color: var(--gold);
+  }
+  label#card-name{
+    width: 120%;
+  }
+  input#card-name{
+    width: 130%;
+  }
+  input#card-cvc{
+    width: 150%;
+  }
+  select#exp-date-month, select#exp-date-year{
+    width: 130%;
+  }
+  #tab{
+    position: relative;
+  }
+  #accordion{
+    position: relative;
+    top: 45px;
+    left: 300px;
+    opacity: 0;
+    transform: scale(3.5);
+    z-index: 10;
+  }
+  #tab-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  #accordion:checked ~ #tab-content{
+    max-height: 30em;
+    width: 95%;
+    padding: 2rem;
+  }
+  .cartsum{
+    order: -1;
+    background-color: transparent;
+    border: none;
+    left: 0;
+    padding: 0;
+  }
+  label#grand-total{
+    display: block;
+    padding: 20px 0;
+    position: sticky;
+    top: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  #payment{
+    display: none;
+  }
+  #next-page{
+    background-color: var(--gold);
+    color: var(--dpblue);
+        padding: 20px 25px;
+        text-align: center;
+        display: block;
+        border-radius: 12px;
+        width: 73%;
+  }
+  .place-order{
+    position: sticky;
+    margin: 1rem 2rem;
+    top: 20px;
+    text-align: center;
+    width: 70%;
+    border-radius: 12px;
+  }
+}
+@media screen and (min-width: 650px) {
+  .desktop-hide{
+    display: none;
+  }
+  .tab{
+    display: flex;
+    flex-direction: column;
+  }
+  label#grand-total{
+    order: 1;
+    padding: .5rem 4.35rem;
+  }
+}

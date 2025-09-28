@@ -1,0 +1,444 @@
+/* Shop Page */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+:root {
+  --main-bg-color: #1A2735;
+  --sun: #D97706;
+  --fool: #065F46;
+  --siren: #0B4A7D;
+  --magician: #5A4099;
+  --oracle: #991D1F;
+
+  --sun-accent: #fef3c7;
+  --fool-accent: #D1FAE5;
+  --siren-accent: #E0FBFC;
+  --magician-accent: #dfcbf3;
+  --oracle-accent: #fecaca;
+
+  --btn-bg: #2A2735;
+  --btn-accent: #CFB383;
+
+
+  --ff-metamorphos: "Metamorphous", serif;
+  --ff-plain: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--ff-plain);
+}
+
+main {
+  background-color: var(--main-bg-color);
+}
+
+.shop-header {
+  width: 100%;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+#shop-heading {
+  text-align: center;
+  display: inline;
+  font-family: var(--ff-metamorphos);
+  color: #CFB383;
+  font-size: 2.5rem;
+}
+
+#products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.card {
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 1rem;
+  border: 3px solid #CFB383;
+}
+
+.card:first-of-type {
+  background-color: var(--sun);
+}
+
+.card:nth-of-type(2) {
+  background-color: var(--siren);
+}
+
+.card:nth-of-type(3) {
+  background-color: var(--fool);
+}
+
+.card:nth-of-type(4) {
+  background-color: var(--magician);
+}
+
+.card:nth-of-type(5) {
+  background-color: var(--oracle);
+}
+
+.card-img {
+  height: auto;
+  width: 100%;
+}
+
+.card-body {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.card button {
+  padding: 0.75rem 1rem;
+  margin: 0;
+  width: 50%;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.card-top {
+  border-bottom: 3px solid #CFB383;
+}
+
+.card-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+
+.card-btn {
+  border-radius: 8px;
+  padding: .75rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  border: 1px solid #CFB383;
+}
+
+.card:first-of-type button {
+  background-color: var(--sun-accent);
+}
+
+.card:nth-of-type(2) button {
+  background-color: var(--siren-accent);
+}
+
+.card:nth-of-type(3) button {
+  background-color: var(--fool-accent);
+}
+
+.card:nth-of-type(4) button {
+  background-color: var(--magician-accent);
+}
+
+.card:nth-of-type(5) button {
+  background-color: var(--oracle-accent);
+}
+
+.card-btn:hover{
+  transition: .5s;
+  background-color: var(--btn-accent);
+  color: white;
+}
+
+@media (max-width: 768px) {
+    #products {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #products {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Modal Styles */
+#shop-overlay {
+  display: none; 
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(26, 39, 53, 0.8); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 500;
+}
+
+
+#close-modal {
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--btn-accent);
+}
+
+.modal-card {
+    position:sticky; 
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 75vw;
+    z-index:1000; 
+
+}
+
+.modal-card-top {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 2em 2em 0; 
+}
+
+
+.modal-price {
+    font-family: var(--ff-metamorphos);
+    margin: 2rem auto;
+    font-size: 1.5em;
+}
+
+h3 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--ff-metamorphos);
+}
+
+.modal-card-bottom {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    padding: 20px; 
+
+}
+
+.modal-card-btn {
+    width: 30%;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.modal-card-img {
+    width: 60%;
+}
+
+input {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .modal-card {
+        flex-direction: column;
+    }
+
+    #close-modal{
+      padding: 5px 5px; 
+    }
+
+    .modal-card-top {
+        padding-top: 30px; 
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .modal-product-detail {
+        flex-direction: row;
+        justify-items: center; 
+        font-size: 16px; 
+    }
+
+    .modal-price {
+        margin: 1rem;
+        font-size: 16px; 
+    }
+
+    .modal-card-img {
+        width: 100%;
+    }
+
+    .modal-card-btn {
+        width: 80%;
+    }
+
+    #flavors{
+      justify-content: center;
+    }
+    input {
+        width: 20%;
+    }
+}
+
+
+#modal-1 {
+  background-color: var(--sun);
+}
+
+#modal-1 .modal-card-btn {
+  background-color: var(--sun-accent);
+}
+#modal-1 .modal-card-img{
+  border: 3px solid var(--sun-accent); 
+  border-radius: 20px; 
+}
+
+ #modal-1 h3, #modal-1 p {
+  color: var(--sun-accent);
+ }
+
+#modal-2 {
+  background-color: var(--siren);
+}
+
+#modal-2 h3, #modal-2 p {
+  color: var(--siren-accent);
+}
+
+
+#modal-2 .modal-card-btn {
+  background-color: var(--siren-accent);
+}
+#modal-2 .modal-card-img{
+  border: 3px solid var(--siren-accent); 
+  border-radius: 20px; 
+}
+
+#modal-3 {
+  background-color: var(--fool);
+}
+
+#modal-3 h3, #modal-3 p {
+  color: var(--fool-accent);
+}
+
+#modal-3 .modal-card-btn {
+  background-color: var(--fool-accent);
+}
+#modal-3 .modal-card-img{
+  border: 3px solid var(--fool-accent); 
+  border-radius: 20px; 
+}
+
+#modal-4 {
+  background-color: var(--magician);
+}
+
+#modal-4 h3, #modal-4 p {
+  color: var(--magician-accent);
+}
+
+#modal-4 .modal-card-btn {
+  background-color: var(--magician-accent);
+}
+#modal-4 .modal-card-img{
+  border: 3px solid var(--magician-accent); 
+  border-radius: 20px; 
+}
+
+#modal-5{
+  background-color: var(--oracle);
+}
+
+#modal-5 h3, #modal-5 p {
+  color: var(--oracle-accent);
+}
+
+#modal-5 .modal-card-btn {
+  background-color: var(--oracle-accent);
+}
+#modal-5 .modal-card-img{
+  border: 3px solid var(--oracle-accent); 
+  border-radius: 20px; 
+}
+
+
+/* product detail styles */ 
+
+.ui-dialog-titlebar-close {
+        display: none;
+}
+
+#flavors{
+  display: flex; 
+  flex-wrap: wrap; 
+  margin-bottom: 10px; 
+} 
+.flavor-tag{
+  margin: 5px;
+}
+#description{
+  font-size: 1.5em; 
+}
+

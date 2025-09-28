@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." name="description"/>
+<meta content="[GIT 450 WEB TEAM  Fall B 2025]" name="author"/>
+<title> ZeroProof — Alcohol-Free Mocktails</title>
+<!-- Open Graph -->
+<meta content="[Brand Name] — Alcohol-Free Mocktails" property="og:title"/>
+<meta content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://mocktail-domain.com" property="og:url"/>
+<!-- Meta OG & Twitter tags (for social sharing) -->
+<meta content="ZeroProof — Alcohol-Free Mocktails" property="og:title"/>
+<meta content="Bold mocktails for every mood — zero alcohol, maximum flavor." property="og:description"/>
+<meta content="https://mocktail-domain.com/assets/og-image.jpg" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="[Brand Name] — Alcohol-Free Mocktails" name="twitter:title"/>
+<meta content="Sophisticated, alcohol-free mocktails crafted for taste, ritual, and style." name="twitter:description"/>
+<meta content="https://mocktail-domain.com/assets/og-image.jpg" name="twitter:image"/>
+<!-- Favicons -->
+<link href="/favicon.ico" rel="icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- JS/CSS Links -->
+<link href="styles.css" rel="stylesheet"/>
+<link href="./styles/home.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" role="banner">
+<div class="container header-row">
+<a aria-label="Saga V home" class="logo" href="index.html">
+<img alt="Saga V" class="logo-img" height="32" src="assets/GIT_450-550_Saga-V_Brand-Team_Logo-wordmark_V1.svg"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu" class="nav-toggle">Menu</button>
+<nav aria-label="Primary" class="primary-nav" id="primary-nav" role="navigation">
+<ul class="nav-list">
+<li><a href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="about.html">About</a></li>
+<li class="nav-cart"><a aria-label="Shopping cart" href="cart.html">Cart<span aria-live="polite" class="cart-count"></span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- ========== Header & Nav ========== -->
+<!-- Main content -->
+<main id="main">
+<!-- Hero section -->
+<section class="hero">
+<div class="heading">
+<h1>Welcome to the world of Saga V</h1>
+<p class="hero-sub">Reimagining how people gather through story-driven <br/>
+             mocktails that bring ritual, artistry and unforgettable flavor.</p>
+<!--leads to product page-->
+<button class="btn btn-primary" id="product-page-button">Discover Menu</button>
+</div>
+<div id="header-img-container">
+<div id="circle-header-img">
+<img alt="Mocktail" src="Content/ContentTeam_Mocktail_V1-14.jpg"/>
+</div>
+<div id="polygon-header-img">
+<img alt="background image" src="Content/background.jpeg"/>
+</div>
+</div>
+</section>
+<!-- Product section -->
+<section class="products">
+<h2>Featured Drinks</h2>
+<div id="product-grid">
+<!-- Product card 1 -->
+<article class="card">
+<div class="card-media">
+<img alt="Mocktail 1" src="Content/ContentTeam_Mocktail_V1-1.jpg"/>
+</div>
+<div class="card-body">
+<h3>The Siren</h3>
+<a class="button" href="/zero-proof-website/checkout.html">Buy Now</a>
+</div>
+</article>
+<!-- Product card 2 -->
+<article class="card">
+<div class="card-media">
+<img alt="Mocktail 2" src="Content/contentTeam_Deliverables.jpg"/>
+</div>
+<div class="card-body">
+<h3>The Magician</h3>
+<a class="button" href="/zero-proof-website/checkout.html">Buy Now</a>
+</div>
+</article>
+</div>
+<!-- View All Button -->
+<div class="view-all-wrapper">
+<button class="button" id="view-all">View All</button>
+</div>
+</section>
+<!--ingredients section-->
+<section id="ingredients">
+<div class="grid profiles-grid responsive-tiles">
+<article aria-labelledby="the-sun-home-title" class="card" tabindex="0">
+<a href="blog.html#the-sun" style="text-decoration:none;color:inherit">
+<div class="media"><img alt="The Sun bottle" src="assets/the-sun.jpg"/></div>
+<div class="content">
+<h3 id="the-sun-home-title">The Sun</h3>
+<p class="muted">Golden peach • honey • vanilla blossom</p>
+<div class="actions">
+<span class="price">Explore</span>
+<span aria-hidden="true">→</span>
+</div>
+</div>
+</a>
+</article>
+<article aria-labelledby="the-siren-home-title" class="card" tabindex="0">
+<a href="blog.html#the-siren" style="text-decoration:none;color:inherit">
+<div class="media"><img alt="The Siren bottle" src="assets/the-siren.jpg"/></div>
+<div class="content">
+<h3 id="the-siren-home-title">The Siren</h3>
+<p class="muted">Sea salt • grapefruit • rosemary</p>
+<div class="actions">
+<span class="price">Explore</span>
+<span aria-hidden="true">→</span>
+</div>
+</div>
+</a>
+</article>
+<article aria-labelledby="the-fool-home-title" class="card" tabindex="0">
+<a href="blog.html#the-fool" style="text-decoration:none;color:inherit">
+<div class="media"><img alt="The Fool bottle" src="assets/the-fool.jpg"/></div>
+<div class="content">
+<h3 id="the-fool-home-title">The Fool</h3>
+<p class="muted">Yuzu • lime • green apple</p>
+<div class="actions">
+<span class="price">Explore</span>
+<span aria-hidden="true">→</span>
+</div>
+</div>
+</a>
+</article>
+<article aria-labelledby="the-magician-home-title" class="card" tabindex="0">
+<a href="blog.html#the-magician" style="text-decoration:none;color:inherit">
+<div class="media"><img alt="The Magician bottle" src="assets/the-magician.jpg"/></div>
+<div class="content">
+<h3 id="the-magician-home-title">The Magician</h3>
+<p class="muted">Blood orange • gentian • botanicals</p>
+<div class="actions">
+<span class="price">Explore</span>
+<span aria-hidden="true">→</span>
+</div>
+</div>
+</a>
+</article>
+<article aria-labelledby="the-oracle-home-title" class="card" tabindex="0">
+<a href="blog.html#the-oracle" style="text-decoration:none;color:inherit">
+<div class="media"><img alt="The Oracle bottle" src="assets/the-oracle.jpg"/></div>
+<div class="content">
+<h3 id="the-oracle-home-title">The Oracle</h3>
+<p class="muted">Tomato • black tea • shiitake</p>
+<div class="actions">
+<span class="price">Explore</span>
+<span aria-hidden="true">→</span>
+</div>
+</div>
+</a>
+</article>
+</div></section>
+<!-- Amazon promo section -->
+<section id="amazon-promo">
+<div class="promo-left">
+<h3>Saga V: Now on Amazon</h3>
+<p>Saga V has partnered with Amazon to share the magic with even more people ready to go on a journey.</p>
+<a class="button" href="https://amazon.com" target="_blank">Shop on Amazon</a>
+</div>
+<div class="promo-right">
+<div class="overlay">
+<h3>All Drinks <br/> Available Now</h3>
+</div>
+<img alt="Saga V Drinks on Amazon" src="Content/ContentTeam_Mocktail_V1-4.jpg"/>
+</div>
+</section>
+<!-- blog highlight section -->
+<section id="blog-highlight">
+<h3> Blog Highlight </h3>
+<div class="carousel slide" data-bs-ride="carousel" id="carousel">
+<div class="carousel-indicators">
+<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleCaptions" type="button"></button>
+<button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleCaptions" type="button"></button>
+<button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions" type="button"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img alt="img" src="https://placehold.co/700x500?text=blogpost1"/>
+</div>
+<div class="carousel-item">
+<img alt="img" src="https://placehold.co/700x500?text=blogpost2"/>
+</div>
+<div class="carousel-item">
+<img alt="img" src="https://placehold.co/700x500?text=blogpost3"/>
+</div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExample" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExample" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+</section>
+<!-- Value propositions section -->
+<section id="value-props">
+<div class="value-grid">
+<div class="value-item">
+<img alt="Premium Alternative" src="https://placehold.co/80x80?text=Icon"/>
+<p>Premium Alternative</p>
+</div>
+<div class="value-item">
+<img alt="Natural &amp; Functional" src="https://placehold.co/80x80?text=Icon"/>
+<p>Natural &amp; Functional</p>
+</div>
+<div class="value-item">
+<img alt="Bold Flavors" src="https://placehold.co/80x80?text=Icon"/>
+<p>Bold Flavors</p>
+</div>
+<div class="value-item">
+<img alt="Story-Driven" src="https://placehold.co/80x80?text=Icon"/>
+<p>Story-Driven</p>
+</div>
+<div class="value-item">
+<img alt="Inclusive &amp; Social" src="https://placehold.co/80x80?text=Icon"/>
+<p>Inclusive &amp; Social</p>
+</div>
+<div class="value-item">
+<img alt="Wellness with Style" src="https://placehold.co/80x80?text=Icon"/>
+<p>Wellness with Style</p>
+</div>
+</div>
+</section>
+<!-- Inspired by Tarot cards-->
+<section id="tarot-cards">
+<!-- Tarot Card Section -->
+<section id="tarot-cards">
+<img alt="Tarot Moodboard Banner" class="tarot-banner" src="Content/Moodboard banner.png"/>
+</section>
+</section>
+<!-- Catchphrase & Newsletter Section -->
+<section id="last-section">
+<!-- Catchphrase -->
+<section id="catchphrase">
+<h4>
+      Inspired by tarot archetypes and crafted like a luxury spirit, our
+      identity blends artistry, mystery and inclusivity.
+    </h4>
+<h2>Saga V</h2>
+</section>
+<!-- Newsletter -->
+<section class="newsletter">
+<h4>JOIN OUR EMAIL LIST</h4>
+<p>Subscribe to start your journey</p>
+<form class="email-signup">
+<input id="email" name="email" placeholder="email@address.com" required="" type="email"/>
+<button class="btn btn-primary" type="submit">SUBSCRIBE</button>
+</form>
+</section>
+</section>
+</main>
+<!-- Footer ADD FOOTER HERE  -->
+<!-- script tags -->
+<footer class="site-footer" role="contentinfo">
+<div class="container footer-grid">
+<div>
+<div class="logo-mark">Saga V</div>
+<p class="muted">Bold mocktails for every mood — zero alcohol, maximum flavor.</p>
+</div>
+<nav aria-label="Footer">
+<ul class="footer-links">
+<li><a href="menu.html">Menu</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="checkout.html">Checkout</a></li>
+</ul>
+</nav>
+<form action="#" class="newsletter" method="post">
+<label class="muted" for="email">Get updates</label>
+<input id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+<div class="container tiny muted">© 2025 Saga V • All rights reserved.</div>
+</footer>
+<script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script><script defer="" src="script.js"></script></body>
+</html>
